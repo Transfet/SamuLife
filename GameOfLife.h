@@ -48,6 +48,11 @@ class GameOfLife : public QThread
     int  numberOfNeighbors ( bool **lattice,
                              int r, int c, bool s );
     void glider ( bool **lattice, int x, int y );
+    void spaceship (bool **lattice, int x , int y);
+    void pulsar (bool **lattice, int x , int y);
+    void diehard(bool **lattice, int x , int y);
+    void acorn(bool **lattice, int x , int y);
+    void gildergun(bool **lattice, int x , int y);
 
     bool **predictions;
     void learning();
@@ -58,7 +63,7 @@ class GameOfLife : public QThread
     
     long m_time{0};
     
-    int m_delay{15};
+    int m_delay{40};
     
 public:
     GameOfLife ( int w = 30, int h = 20 );

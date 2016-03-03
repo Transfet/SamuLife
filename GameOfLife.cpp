@@ -64,13 +64,166 @@ GameOfLife::GameOfLife ( int w, int h ) : m_w ( w ), m_h ( h )
         lattice[i][j] = false;
       }
 
-  glider ( lattice, 2*m_w/5, 2*m_h/5 );
-  glider ( lattice, 3*m_w/5, 3*m_h/5 );
-  glider ( lattice, 4*m_w/5, 4*m_h/5 );
-  glider ( lattice, 4*m_w/5, 2*m_h/5 );
-  glider ( lattice, 2*m_w/5, 4*m_h/5 );
+
+       spaceship(lattice,15,25);
+        pulsar(lattice,30,35);
+      //  gildergun(lattice,30,35);
+     // acorn(lattice,15,25);
+      //diehard(lattice,15,25);
+ // glider ( lattice, 2*m_w/5, 2*m_h/5 );
+ // glider ( lattice, 3*m_w/5, 3*m_h/5 );
+ // glider ( lattice, 4*m_w/5, 4*m_h/5 );
+ // glider ( lattice, 4*m_w/5, 2*m_h/5 );
+ // glider ( lattice, 2*m_w/5, 4*m_h/5 );
 
 }
+
+  void GameOfLife::spaceship (bool **lattice, int x , int y)
+    {
+
+  lattice[y + 5][x + 4] = true;
+  lattice[y + 5][x + 5] = true;
+  lattice[y + 4][x + 6] = true;
+  lattice[y + 6][x + 6] = true;
+  lattice[y + 5][x + 7] = true;
+  lattice[y + 5][x + 8] = true;
+  lattice[y + 5][x + 9] = true;
+  lattice[y + 5][x + 10] = true;
+  lattice[y + 5][x + 12] = true;
+  lattice[y + 5][x + 13] = true;
+  lattice[y + 4][x + 11] = true;
+  lattice[y + 6][x + 11] = true;
+
+
+
+    }
+
+    void GameOfLife::pulsar (bool **lattice, int x , int y)
+    {
+
+  lattice[y + 11][x + 3] = true;
+  lattice[y + 11][x + 4] = true;
+  lattice[y + 11][x + 5] = true;
+  lattice[y + 11][x + 9] = true;
+  lattice[y + 11][x + 10] = true;
+  lattice[y + 11][x + 11] = true;
+  lattice[y + 13][x + 1] = true;
+  lattice[y + 13][x + 6] = true;
+  lattice[y + 13][x + 8] = true;
+  lattice[y + 13][x + 13] = true;
+  lattice[y + 14][x + 1] = true;
+  lattice[y + 14][x + 6] = true;
+
+  lattice[y + 14][x + 8] = true;
+  lattice[y + 14][x + 13] = true;
+  lattice[y + 15][x + 1] = true;
+  lattice[y + 15][x + 6] = true;
+  lattice[y + 15][x + 8] = true;
+  lattice[y + 15][x + 13] = true;
+  lattice[y + 16][x + 3] = true;
+  lattice[y + 16][x + 4] = true;
+  lattice[y + 16][x + 5] = true;
+  lattice[y + 16][x + 9] = true;
+  lattice[y + 16][x + 10] = true;
+  lattice[y + 16][x + 11] = true;
+
+  lattice[y + 18][x + 3] = true;
+  lattice[y + 18][x + 4] = true;
+  lattice[y + 18][x + 5] = true;
+  lattice[y + 18][x + 9] = true;
+  lattice[y + 18][x + 10] = true;
+  lattice[y + 18][x + 11] = true;
+  lattice[y + 19][x + 1] = true;
+  lattice[y + 19][x + 6] = true;
+  lattice[y + 19][x + 8] = true;
+  lattice[y + 19][x + 13] = true;
+  lattice[y + 20][x + 1] = true;
+  lattice[y + 20][x + 6] = true;
+
+  lattice[y + 20][x + 8] = true;
+  lattice[y + 20][x + 13] = true;
+  lattice[y + 21][x + 1] = true;
+  lattice[y + 21][x + 6] = true;
+  lattice[y + 21][x + 8] = true;
+  lattice[y + 21][x + 13] = true;
+  lattice[y + 23][x + 3] = true;
+  lattice[y + 23][x + 4] = true;
+  lattice[y + 23][x + 5] = true;
+  lattice[y + 23][x + 9] = true;
+  lattice[y + 23][x + 10] = true;
+  lattice[y + 23][x + 11] = true;
+
+    }
+
+   void GameOfLife::diehard(bool **lattice, int x , int y){
+
+  lattice[y + 1][x + 7] = true;
+  lattice[y + 2][x + 1] = true;
+  lattice[y + 2][x + 2] = true;
+  lattice[y + 3][x + 2] = true;
+  lattice[y + 3][x + 6] = true;
+  lattice[y + 3][x + 7] = true;
+  lattice[y + 3][x + 8] = true;
+
+   }
+
+   void GameOfLife::acorn(bool **lattice, int x , int y){
+
+  lattice[y + 1][x + 2] = true;
+  lattice[y + 2][x + 4] = true;
+  lattice[y + 3][x + 1] = true;
+  lattice[y + 3][x + 2] = true;
+  lattice[y + 3][x + 5] = true;
+  lattice[y + 3][x + 6] = true;
+  lattice[y + 3][x + 7] = true;
+
+   }
+
+   void GameOfLife::gildergun(bool **lattice, int x , int y){
+
+  lattice[y + 1][x + 25] = true;
+  lattice[y + 2][x + 23] = true;
+  lattice[y + 2][x + 25] = true;
+  lattice[y + 3][x + 13] = true;
+  lattice[y + 3][x + 14] = true;
+  lattice[y + 3][x + 21] = true;
+  lattice[y + 3][x + 22] = true;
+  lattice[y + 3][x + 35] = true;
+  lattice[y + 3][x + 36] = true;
+  lattice[y + 4][x + 12] = true;
+  lattice[y + 4][x + 16] = true;
+  lattice[y + 4][x + 21] = true;
+
+  lattice[y + 4][x + 22] = true;
+  lattice[y + 4][x + 35] = true;
+  lattice[y + 4][x + 36] = true;
+  lattice[y + 5][x + 1] = true;
+  lattice[y + 5][x + 2] = true;
+  lattice[y + 5][x + 11] = true;
+  lattice[y + 5][x + 17] = true;
+  lattice[y + 5][x + 21] = true;
+  lattice[y + 5][x + 22] = true;
+  lattice[y + 6][x + 1] = true;
+  lattice[y + 6][x + 2] = true;
+  lattice[y + 6][x + 11] = true;
+
+  lattice[y + 6][x + 15] = true;
+  lattice[y + 6][x + 17] = true;
+  lattice[y + 6][x + 18] = true;
+  lattice[y + 6][x + 23] = true;
+  lattice[y + 6][x + 25] = true;
+  lattice[y + 7][x + 11] = true;
+  lattice[y + 7][x + 17] = true;
+  lattice[y + 7][x + 25] = true;
+  lattice[y + 8][x + 12] = true;
+  lattice[y + 8][x + 16] = true;
+  lattice[y + 9][x + 13] = true;
+  lattice[y + 9][x + 14] = true;
+
+
+   }
+
+
 
 bool ** GameOfLife::lattice()
 {
@@ -199,11 +352,11 @@ GameOfLife::~GameOfLife()
 void GameOfLife::glider ( bool **lattice, int x, int y )
 {
 
+  lattice[y+0][x+0] = true;
   lattice[y+0][x+2] = true;
-  lattice[y+1][x+1] = true;
-  lattice[y+2][x+1] = true;
-  lattice[y+2][x+2] = true;
+  lattice[y+1][x+2] = true;
   lattice[y+2][x+3] = true;
+  lattice[y+3][x+3] = true;
 
 }
 
